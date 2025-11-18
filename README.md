@@ -2,63 +2,70 @@ working frontend and backend
 1. Complete frontend code, using jsp, css, and js
 2. Comple backend code , using java ,Servlet(Proper structured).
 
-ProjectTask
-Description
+📌 ProjectTask
 
-ProjectTask is a Java-based web application. Users can submit contact messages and request quotes. Admin can manage projects, clients, contact messages, and newsletter subscriptions easily.
+ProjectTask is a Java-based web application designed to help users submit contact messages and request service quotes while providing an admin panel to manage projects, clients, contact submissions, and newsletter subscriptions. The project demonstrates full-stack Java web development with JSP, Servlets, MySQL, and dynamic frontend interactions.
 
-Features
-User Side
+💻 Key Features
+🧑 User Side
 
-Submit contact form with name, email, phone, and city.
+📝 Contact Form – Users can submit their name, email, phone number, and city.
 
-Submit quote request with name, phone, service type, and message.
+💬 Quote Request Form – Users can request service quotes by entering name, phone, service type, and message.
 
-Validation for empty fields and correct phone number.
+✅ Form Validation – Ensures required fields are filled and phone numbers are correct (10-digit validation).
 
-Admin Side
+🏛 Admin Side
 
-Add projects with name, description, and image.
+📂 Project Management – Admin can add projects with name, description, and image.
 
-Add clients with name, designation, description, and image.
+👥 Client Management – Admin can add clients with name, designation (e.g., CEO, Designer), description, and image.
 
-View all contact messages submitted by users.
+📋 View Contact Messages – Admin can see all user-submitted contact forms.
 
-View subscribed email addresses in newsletter.
+📧 Newsletter Management – Admin can view all subscribed email addresses.
 
-Database Tables
+🗄 Database Tables
+Table Name	Columns
+projects	id, project_name, project_desc, image
+clients	id, client_name, designation, description, image
+contact	id, full_name, email, mobile, city
+newsletter	id, email
 
-projects – id, project_name, project_desc, image
+All tables are created with CREATE TABLE IF NOT EXISTS, ensuring no duplicate tables.
 
-clients – id, client_name, designation, description, image
+🛠 Technologies Used
 
-contact – id, full_name, email, mobile, city
+Backend: Java, JSP, Servlets
 
-newsletter – id, email
+Frontend: HTML, CSS, JavaScript
 
-Technologies Used
+Database: MySQL
 
-Java, JSP, Servlets
+Database Connectivity: JDBC
 
-MySQL Database
+⚙ How It Works
 
-HTML, CSS, JavaScript
+Users fill contact or quote forms on the frontend.
 
-JDBC for database connection
+Data is validated in the backend using Servlets and service classes.
 
-How It Works
+Valid data is stored in the MySQL database.
 
-Users submit forms → validated in backend → stored in MySQL database.
+Admin panel allows viewing projects, clients, messages, and newsletter emails.
 
-Admin panel shows projects, clients, contact messages, and newsletter emails.
+Dynamic alerts are displayed for success or errors during form submission.
 
-Success or error messages are displayed dynamically.
+🚀 Deployment
 
-Deployment
+Can be deployed on Railway.com or any Java-supporting cloud hosting.
 
-Can be deployed on platforms like Railway.com.
+Connect MySQL database using environment variables provided by the hosting platform.
 
-Connect MySQL using environment variables.
+Can run on a Tomcat server or inside a Docker container for easy deployment.
 
-Run on Tomcat server or use Docker.
+After deployment, the website is accessible through a public URL.
 
+📌 Summary
+
+ProjectTask covers the complete frontend and backend stack for a small business or service-oriented platform. Users can communicate with the platform via forms, and admin has full control over projects, clients, contacts, and newsletters. It is an example of practical full-stack Java web development combining JSP, Servlets, MySQL, and dynamic user interaction.
