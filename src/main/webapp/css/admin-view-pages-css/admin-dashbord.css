@@ -1,0 +1,114 @@
+@charset "UTF-8";
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --text-dark: #343a40;
+    --border-color: #dee2e6;
+    --shadow-light: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.admin-header {
+    background-color: #ffffff;
+    color: var(--bg-white);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#nav-logo {
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+#nav-logo span:first-child {
+    color: var(--primary-color);
+}
+#nav-logo span:last-child {
+    color: var(--text-dark);
+}
+.admin-header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.admin-header nav ul li {
+    margin-left: 20px;
+}
+
+.admin-header nav ul li a {
+    text-decoration: none;
+    color: #0a0a0a;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.admin-header nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+main h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .admin-header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .admin-header nav ul li {
+        margin: 5px 10px;
+    }
+
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+}
